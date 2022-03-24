@@ -80,5 +80,5 @@ int main()
 		cout<<it.first<<" "<<it.second<<"\n";//14 45  85 69
 	}
 	//to sort a vector in descending order
-	sort(vecc.begin(),vec.end(),greater<int>);
+	sort(vecc.begin(),vec.end(),greater<int>());
 }
