@@ -15,22 +15,23 @@ int main()
 	{
 		cout<<it.first<<" "<<it.second<<"\n";
 	}
-	// for(auto itr=mpp.begin();itr!=mpp.end();itr++)  //second method 
-	// {
-	// 	cout<<itr->first<<" "<<itr->second<<"\n";
-	// }
+	for(auto itr=mpp.begin();itr!=mpp.end();itr++)  //second method 
+	{
+	 	cout<<itr->first<<" "<<itr->second<<"\n";
+	}
 	//assigning one map values to another map (like copying)
-	//map<int,int>mpp2(mpp.begin(),mpp.end());
-	// for (auto it:mpp2)   //mpp elements are copied to mpp2
-	// {
-	// 	cout<<it.first<<" "<<it.second<<"\n";
-	// }
-	// mpp2.erase(mpp2.begin(),mpp2.find(3)); //erases upto the key value 3
-	// for (auto it:mpp2)   
-	// {
-	// 	cout<<it.first<<" "<<it.second<<"\n"; 
-	// }
-	//mpp.swap(mpp2); //swaps the elements of mpp and mpp2
+	map<int,int>mpp2(mpp.begin(),mpp.end());
+	for (auto it:mpp2)   //mpp elements are copied to mpp2
+	{
+	 	cout<<it.first<<" "<<it.second<<"\n";
+	}
+	mpp2.erase(mpp2.begin(),mpp2.find(3)); //erases upto the key value 3
+	for (auto it:mpp2)   
+	{
+	 	cout<<it.first<<" "<<it.second<<"\n"; 
+	}
+	mpp.swap(mpp2); //swaps the elements of mpp and mpp2
 	cout<<mpp.lower_bound(6)->first;  //at ley 6 first value is printed
 	cout<<mpp.upper_bound(10)->second;
+	return 0;
 }
